@@ -10,6 +10,7 @@ sudo apt update -y
 
 #apt install squid proxy
 sudo apt -y install squid
+sudo apt -y install net-tools
 
 #start squid
 sudo systemctl start squid
@@ -17,3 +18,7 @@ sudo systemctl enable squid
 
 # show squid status
 sudo systemctl status squid
+
+# stop the squid service
+sudo systemctl stop squid
+
