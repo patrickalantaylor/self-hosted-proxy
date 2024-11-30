@@ -11,6 +11,7 @@ sudo apt update -y
 #apt install squid proxy
 sudo apt -y install squid
 sudo apt -y install net-tools
+sudo apt -y install apache2-utils
 
 #start squid
 sudo systemctl start squid
