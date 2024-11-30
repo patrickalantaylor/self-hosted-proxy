@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+## this is a script intended to be pasted into user-data for a digital ocean droplet
+
+# get apt set up
+sudo apt update -y
+
+#apt install squid proxy
+sudo apt -y install squid
+sudo apt -y install net-tools
+sudo apt -y install apache2-utils
