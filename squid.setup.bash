@@ -22,3 +22,9 @@ sudo systemctl status squid
 # stop the squid service
 sudo systemctl stop squid
 
+#todo figure out how to set a password to envars
+## or possibly userdata or script to call 
+# htpasswd -b -c /etc/squid/passwords admin test101
+
+#todo go through steps to set up auth
+
