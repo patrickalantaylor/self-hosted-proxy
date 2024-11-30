@@ -9,3 +9,5 @@ sudo apt update -y
 sudo apt -y install squid
 sudo apt -y install net-tools
 sudo apt -y install apache2-utils
+
+htpasswd -b -c /etc/squid/passwords admin test101
