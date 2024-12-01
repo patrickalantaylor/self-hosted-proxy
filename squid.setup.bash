@@ -1,17 +1,11 @@
 #!/bin/bash 
 
-## this is a script for the installation and configuraiton of the squid proxy
-## this script was taken from https://coderevolution.ro/knowledge-base/faq/how-to-set-up-your-own-free-proxy-server/ on Nov 29 2024
+## this is a script for the configuraiton of the squid proxy
+## this script depends on the user-data script included in this repo to be run on furst launch. 
+## In a digital ocean droplet, the user data is entered on droplet creation under [We recommend these options] / Advanced / Add Initialization scripts (free)
+## parts of this script was taken from https://coderevolution.ro/knowledge-base/faq/how-to-set-up-your-own-free-proxy-server/ on Nov 29 2024
 ## this script is tested on Ubuntu v 24.04 (LTS) on digital ocean droplet.
 ## run this with bash ./squid.setup.bash
-
-# get apt set up
-sudo apt update -y
-
-#apt install squid proxy
-sudo apt -y install squid
-sudo apt -y install net-tools
-sudo apt -y install apache2-utils
 
 #start squid
 sudo systemctl start squid
@@ -23,9 +17,8 @@ sudo systemctl status squid
 # stop the squid service
 sudo systemctl stop squid
 
-#todo figure out how to set a password to envars
-## or possibly userdata or script to call 
-# htpasswd -b -c /etc/squid/passwords admin test101
+#todo create a reference squid.conf
+
 
 #todo go through steps to set up auth
 
